@@ -39,7 +39,7 @@ function sendMail() {
       document.getElementById("plan").value = "";
       document.getElementById("termsAndConditions").checked = false;
       
-      alert("Form submitted successfully!");
+      alert("Thankyou for choosing Adisom , Our team contact you soon through email.");
       console.log("Email sent:", res);
     })
     .catch((err) => {
