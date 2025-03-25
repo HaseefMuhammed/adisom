@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adisom</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/1-removebg-preview (1).png" type="image/png">
+  <link rel="stylesheet" href="bootstrap.css">
+  <script src="https://kit.fontawesome.com/3945bc0b8d.js" crossorigin="anonymous"></script>
+  <!-- Highlight.js CSS (Dark Theme) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+
+  <style>
+    .code-container {
+        width: 100%;
+        max-width: 1000px;
+        background: rgba(30, 30, 30, 0.9);
+        border-radius: 12px;
+        padding: 20px;
+        position: relative;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
+        margin-top: 3em;
+        align-items: center;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    pre {
+        margin: 0;
+        padding-right: 40px;
+        overflow-x: auto;
+    }
+
+    .copy-btn {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: rgb(6,28,191);
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: bold;
+        transition: background 0.3s ease;
+    }
+
+    .copy-btn:hover {
+        background: #0056b3;
+    }
+
+    .tooltip.show {
+        opacity: 1 !important;
+    }
+</style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="images/nav image.png" alt="Adisom" class="img-fluid"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mx-5">
+            <li class="nav-item nav-custom">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item nav-custom">
+              <a class="nav-link " href="maker.html">Make ads</a>
+            </li>
+            <li class="nav-item nav-custom underline-nav">
+              <a class="nav-link active" href="#">API</a>
+            </li>
+            <li class="nav-item nav-custom">
+              <a class="nav-link" href="contact.html">Contact us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  <div class="p-3"></div>
+ 
+  <section class="header2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img class="img-fluid" src="images/graphics2.png" alt="">
+        </div>
+        <div class="col-md-6 text-center align-items-center d-flex header2-txt p-2">
+          <h1>RUN ADS ON MY SITE</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="code-container position-relative">
+        <button class="copy-btn btn btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy to Clipboard"><i class="fa-solid fa-copy"></i></button>
+        <pre><code class="language-html">
+&lt;script src="https://haseefmuhammed.github.io/adisomapi/adisomapiHaseefSwiftv1r25032025.js"&gt;&lt;/script&gt;
+        </code></pre>
+    </div>
+</div>
+
+  
+
+  <footer class="text-center mt-5 bg-dark">
+    <p>ALL RIGHTS RESERVED FROM ADISOM <br>
+      &COPY; <span id="year"></span> <br>
+      DEVELOPED BY <a href="https://tebinnovations.in" target="_blank">TEB Innovations</a> & <a href="https://haseef-ws.netlify.app" target="_blank">HASEEF</a>
+    </p>
+  </footer>
+  
+  <script src="bootstrap.js"></script>
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="https://haseefmuhammed.github.io/adisomapi/adisomapiHaseefSwiftv1r25032025.js"></script>
+
+
+  <script>
+    // Initialize syntax highlighting
+    hljs.highlightAll();
+
+    // Copy to clipboard function
+    document.querySelector(".copy-btn").addEventListener("click", function() {
+        const code = document.querySelector(".code-container pre code").innerText;
+        navigator.clipboard.writeText(code).then(() => {
+            const tooltip = new bootstrap.Tooltip(this);
+            this.setAttribute("title", "Copied!");
+            tooltip.show();
+            setTimeout(() => {
+                this.setAttribute("title", "Copy to Clipboard");
+                tooltip.hide();
+            }, 2000);
+        });
+    });
+
+    // Enable Bootstrap tooltips
+    // document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
+    //     new bootstrap.Tooltip(el);
+    // });
+</script>
+
+</body>
+</html>

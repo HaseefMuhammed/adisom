@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adisom</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/1-removebg-preview (1).png" type="image/png">
+  <link rel="stylesheet" href="bootstrap.css">
+  <!-- Form submission ajax -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="images/nav image.png" alt="Adisom" class="img-fluid"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mx-5">
+            <li class="nav-item nav-custom">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item nav-custom">
+              <a class="nav-link " href="maker.html">Make ads</a>
+            </li>
+            <li class="nav-item nav-custom underline-nav">
+              <a class="nav-link active" href="#">API</a>
+            </li>
+            <li class="nav-item nav-custom">
+              <a class="nav-link" href="contact.html">Contact us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  <div class="p-3"></div>
+ 
+  <section class="header2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img class="img-fluid" src="images/graphics2.png" alt="">
+        </div>
+        <div class="col-md-6 text-center align-items-center d-flex header2-txt p-2">
+          <h1>RUN ADS ON MY SITE</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="form-sec">
+    <div class="container mt-5">
+    <form class="row g-3" id="submit-form" method="">
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Name</label><i class="text-danger">*</i>
+        <input type="text" class="form-control" id="name" name="Name" placeholder="Your name" required>
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Email</label><i class="text-danger">*</i>
+        <input type="email" class="form-control" id="email" name="Email" placeholder="example@example.com" required>
+      </div>
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Website Name</label><i class="text-danger">*</i>
+        <input type="text" class="form-control" id="companyName" name="Website Name"  placeholder="Your website name" required>
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Website Url</label><i class="text-danger">*</i>
+        <input type="url" class="form-control" id="companyWebsite" name="Website url"  placeholder="https://sample.com" required>
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="termsAndConditions" name="Terms and conditions" required checked><i class="text-danger">*</i>
+          <label class="form-check-label" for="gridCheck">
+            Terms and conditions
+          </label>
+        </div>
+      </div>
+      <div class="col-12 align-items-center text-center">
+        <button type="submit" class="btn-submit2 btn align-items-center">Get API</button>
+      </div>
+    </form>
+  </div>
+  </section>
+
+  <footer class="text-center mt-5 bg-dark">
+    <p>ALL RIGHTS RESERVED FROM ADISOM <br>
+      &COPY; <span id="year"></span> <br>
+      DEVELOPED BY <a href="https://tebinnovations.in" target="_blank">TEB Innovations</a> & <a href="https://haseef-ws.netlify.app" target="_blank">HASEEF</a>
+    </p>
+  </footer>
+  
+  <script src="bootstrap.js"></script>
+  <script src="script.js"></script>
+
+  <script>
+    $("#submit-form").submit((e)=>{
+        e.preventDefault()
+        $.ajax({
+            url:"https://script.google.com/macros/s/AKfycbwJaZOLpdRrBulc1uh8Pd2ClEM4SggzlQfdwFgpuROpTYlGLd-GmAm-90zuqkeSsDBx/exec",
+            data:$("#submit-form").serialize(),
+            method:"post",
+            success:function (response){
+                //alert("Form submitted successfully")
+                //window.location.reload()
+                window.location.href="request.html"
+            },
+            error:function (err){
+                alert("Something Error")
+
+            }
+        })
+    })
+</script>
+</body>
+</html>
