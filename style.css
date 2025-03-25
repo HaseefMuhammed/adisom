@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Protest+Guerrilla&display=swap');
+
+:root{
+  --brand-colour: rgb(6,28,191);
+  --brand-secondary-colour: rgb(254, 164, 1);
+  --font-main: "Protest Guerrilla", sans-serif;
+}
+
 .navbar-brand img{
   width: 5em;
 }
@@ -117,7 +124,32 @@ footer{
   color: white;
   background: #333;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1em;
   font-family: 'Times New Roman', Times, serif;
   text-decoration: none;
+}
+footer i{
+  font-style: normal;
+}
+.header1{
+  background-color: var(--brand-colour);
+}
+.header-txt{
+  color: var(--brand-secondary-colour);
+  font-family: var(--font-main);
+  text-align: center;
+}
+.header-txt h1{
+  font-size: 3.5em;
+  text-align: center;
+  margin-top: 1em;
+}
+.form-sec h1{
+  font-family: var(--font-main);
+  margin-top: 1em;
+}
+.btn-submit{
+  background-color: var(--brand-colour) !important;
+  color: white !important;
+  width: 30%;
 }
